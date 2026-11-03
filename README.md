@@ -2,12 +2,16 @@
 
 **Detects dogs and cats. Breeds: 60 dog breeds and 12 pedigree cat breeds (a mixed-breed cat usually shows no breed).**
 
-Two packages for the nakordoni DevAPI pet-recognition product (local files only, not published):
+Two packages for the nakordoni DevAPI pet-recognition product:
 
 - `custom_components/nkd_pet_recognition/`: HACS custom integration (config flow, sensor + dog/cat binary sensors per camera, event, service).
 - `addon/nkd_pet_recognition/`: Supervisor add-on that publishes the same data over MQTT discovery.
 
-Status: API client implemented against the v3 spec (`POST https://nakordoni.eu/api/v3/data/pet-recognition`, multipart `image`, `Authorization: Bearer <key>`).
+## Get an API key
+
+Both packages need a nakordoni DevAPI key. Sign up at https://nakordoni.eu/en/developers and create a key in the portal. The free Explorer plan includes 20 pet-recognition calls per day, enough for one camera on a slow interval; paid plans raise the limit.
+
+The packages call `POST https://nakordoni.eu/api/v3/data/pet-recognition` (multipart `image`, `Authorization: Bearer <key>`).
 
 ## Integration
 
