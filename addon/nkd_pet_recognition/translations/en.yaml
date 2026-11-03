@@ -1,0 +1,19 @@
+configuration:
+  api_key:
+    name: API key
+    description: nakordoni DevAPI key for the pet-recognition product. Stored only in the add-on options.
+  cameras:
+    name: Cameras
+    description: Each entry needs a name and EITHER a snapshot URL OR a Home Assistant camera entity (fetched through the Supervisor API).
+  interval:
+    name: Poll interval (s)
+    description: Seconds between analyses per camera.
+  threshold:
+    name: Confidence threshold
+    description: Dogs and cats. A binary sensor (Dog detected / Cat detected) turns on when that species is found with a score at or above this value (breed scores are never used).
+  max_failures:
+    name: Failed polls before unavailable
+    description: After this many consecutive failed polls the binary sensor becomes unavailable.
+  mqtt:
+    name: MQTT
+    description: Leave host empty to use the Mosquitto broker service from the Supervisor.

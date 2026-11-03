@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "NKD Pet Recognition",
+        "description": "Розпізнає собак і котів. Породи: 60 порід собак і 12 порід котів (у безпородного кота порода зазвичай не визначається). Результат — це класифікація з оцінкою впевненості. Не покладайтеся на нього для безпеки тварин.",
+        "data": {
+          "api_key": "API-ключ",
+          "cameras": "Камери",
+          "interval": "Інтервал опитування (с)",
+          "threshold": "Поріг впевненості (species_score)",
+          "max_failures": "Невдалих опитувань до «недоступний»"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Введіть API-ключ знову",
+        "description": "API-ключ відхилено. Введіть дійсний ключ.",
+        "data": {
+          "api_key": "API-ключ"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Недійсний API-ключ",
+      "cannot_connect": "Не вдалося підключитися до сервісу"
+    },
+    "abort": {
+      "already_configured": "Уже налаштовано",
+      "reauth_successful": "Ключ оновлено"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Параметри NKD Pet Recognition",
+        "data": {
+          "cameras": "Камери",
+          "interval": "Інтервал опитування (с)",
+          "threshold": "Поріг впевненості (species_score)",
+          "max_failures": "Невдалих опитувань до «недоступний»"
+        }
+      }
+    }
+  },
+  "services": {
+    "analyze": {
+      "name": "Проаналізувати зараз",
+      "description": "Зробити один знімок і одразу надіслати на розпізнавання.",
+      "fields": {
+        "entity_id": {
+          "name": "Камера",
+          "description": "Камера, налаштована в NKD Pet Recognition."
+        }
+      }
+    }
+  }
+}

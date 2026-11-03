@@ -1,0 +1,12 @@
+analyze:
+  name: Analyze now
+  description: Take one snapshot from the camera and send it for recognition immediately.
+  fields:
+    entity_id:
+      name: Camera
+      description: Camera entity configured in NKD Pet Recognition.
+      required: true
+      selector:
+        entity:
+          domain: camera
+          multiple: true

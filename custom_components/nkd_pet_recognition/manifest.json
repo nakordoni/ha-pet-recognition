@@ -1,0 +1,13 @@
+{
+  "domain": "nkd_pet_recognition",
+  "name": "NKD Pet Recognition",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["camera"],
+  "documentation": "https://github.com/nakordoni/ha-pet-recognition",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/nakordoni/ha-pet-recognition/issues",
+  "requirements": [],
+  "version": "0.2.1"
+}

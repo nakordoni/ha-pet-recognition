@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "NKD Pet Recognition",
+        "description": "Detects dogs and cats. Breeds: 60 dog breeds and 12 pedigree cat breeds (a mixed-breed cat usually shows no breed). Result is a classification with a confidence score. Do not rely on it for animal safety.",
+        "data": {
+          "api_key": "API key",
+          "cameras": "Cameras",
+          "interval": "Poll interval (s)",
+          "threshold": "Confidence threshold (species score)",
+          "max_failures": "Failed polls before 'unavailable'"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-enter API key",
+        "description": "The API key was rejected. Enter a valid key.",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid API key",
+      "cannot_connect": "Cannot connect to the service"
+    },
+    "abort": {
+      "already_configured": "Already configured",
+      "reauth_successful": "Key updated"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "NKD Pet Recognition options",
+        "data": {
+          "cameras": "Cameras",
+          "interval": "Poll interval (s)",
+          "threshold": "Confidence threshold (species score)",
+          "max_failures": "Failed polls before 'unavailable'"
+        }
+      }
+    }
+  },
+  "services": {
+    "analyze": {
+      "name": "Analyze now",
+      "description": "Take one snapshot and send it for recognition immediately.",
+      "fields": {
+        "entity_id": {
+          "name": "Camera",
+          "description": "Camera entity configured in NKD Pet Recognition."
+        }
+      }
+    }
+  }
+}
